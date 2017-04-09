@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="format-detection" content="telephone=no"/>
+    <title>考勤</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+
+        body{
+            margin: 0;
+            background-color: #F4F6F8;
+            font-family: '微软雅黑',sans-serif;
+        }
+
+        .header{
+            width: 100%;
+            background-color: #ffffff;
+            font-size: 16px;
+            color: #FFFFFF;
+            position: fixed;
+        }
+
+        .header-con{
+            line-height: 44px;
+            position: relative;
+        }
+
+        .back{
+            float: left;
+        }
+
+        .back-icon{
+            background-image: url('images/ic_arrow_back.png');
+            background-repeat: no-repeat;
+            background-size: auto 19px;
+            display: inline-block;
+            float: left;
+            height: 44px;
+            width: 26px;
+            background-position: 9px 12px;
+        }
+
+        .back-icon:active{
+            background-image: url('images/ic_arrow_back.png');
+        }
+
+        .back-con{
+            float: left;
+            padding: 0 11px 0 6px;
+            color:#333333;
+        }
+
+        .back:active .back-con{
+            opacity: 0.5;
+        }
+
+        .back:active .back-icon{
+            background-image: url('images/ic_arrow_back.png');
+        }
+
+        /*.close{
+            float: left;
+            line-height: 44px;
+        }
+
+        .close:active{
+            opacity: 0.5;
+        }*/
+
+        .header-title{
+            float: right;
+            padding-right: 50%;
+            position: relative;
+            min-width: 32px;
+        }
+
+        .header-title-con{
+            position: absolute;
+            left: -16px;
+            width: 100%;
+            color:#333333;
+        }
+
+        .sad-content{
+            text-align: center;
+            font-size: 16px;
+            color: #999999;
+            line-height: 30px;
+            padding-top: 32%;
+        }
+
+        .sad{
+            background-image: url('images/sad.png');
+            background-repeat: no-repeat;
+            background-size: 120px 120px;
+            width: 120px;
+            height: 120px;
+            position: fixed;
+            left: 50%;
+            right: 0;
+            margin: 0 0 0 -60px;
+        }
+
+        .text{
+            margin-top: 140px;
+        }
+
+        .reload{
+            background-color: #FFFFFF;
+            border: 1px solid #D2D9E0;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #5A5A5A;
+            line-height: 44px;
+            margin: 16px 15% 0 15%;
+        }
+
+        .reload:active{
+            background: #FFFFFF;
+            background-color: rgba(0,0,0,0.10);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-con">
+            <div class="back clearfix" id="close">
+                <div class="back-icon"></div>
+                <div class="back-con"></div>
+            </div>
+            <!--<div class="close" id="close">关闭</div>-->
+            <div class="header-title">
+                <div class="header-title-con">考勤</div>
+            </div>
+        </div>
+    </div>
+    <div class="sad-content">
+        <div class="sad"></div>
+        <div class="text">
+            <div>加载失败</div>
+            <div>网络不给力哦，请重试~</div>
+            <div class="reload" id="reload">重新加载</div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
